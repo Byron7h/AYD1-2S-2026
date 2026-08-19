@@ -80,14 +80,6 @@ Enlaces de referencia:
 
 - Archivos PDF de los tableros: [tableros_f2/](tableros_f2/)
 
-### EjemploReadme.md
-
-Archivo de referencia utilizado para organizar este README mediante las secciones de tema general, estructura, enlaces de referencia y resultado de aprendizaje esperado.
-
-Enlaces de referencia:
-
-- Ejemplo de formato: [EjemploReadme.md](EjemploReadme.md)
-
 ## Que tecnologias y herramientas se utilizan en estos ejemplos
 
 - Trello para la gestion visual del trabajo.
