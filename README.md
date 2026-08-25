@@ -25,3 +25,19 @@ Enlaces de referencia:
 - Eventos Scrum: [Scrumban/scrum_meetings.md](Scrumban/scrum_meetings.md)
 - Capturas del tablero de la Fase 1: [Scrumban/imgs_kanban/](Scrumban/imgs_kanban/)
 - Evidencias de los tableros de la Fase 2: [Scrumban/tableros_f2/](Scrumban/tableros_f2/)
+
+### Requerimientos
+
+Tema general:
+
+- Guia de apoyo para comprender la clasificacion de requerimientos del proyecto.
+- Explicacion de requerimientos funcionales (RF) y no funcionales (RNF).
+- Desglose de RNF en requerimientos de restriccion (RR) y de calidad (EAC).
+- Enlaces directos a los documentos de ejemplo de la carpeta Requerimientos.
+
+Enlaces de referencia:
+
+- Vista general del bloque: [Requerimientos/README.md](Requerimientos/README.md)
+- Requerimientos funcionales (RF): [Requerimientos/RFs-requerimientos-funcionales](Requerimientos/RFs-requerimientos-funcionales)
+- Requerimientos de restriccion (RR): [Requerimientos/RRs-requerimientos-restriccion](Requerimientos/RRs-requerimientos-restriccion)
+- Requerimientos de calidad (EAC): [Requerimientos/EACs-requerimientos-calidad](Requerimientos/EACs-requerimientos-calidad)
