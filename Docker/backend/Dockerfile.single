@@ -1,0 +1,31 @@
+# Demo: single-stage build (intencionalmente menos optimizado)
+# Usar este archivo para comparar tamaño/tiempo contra Dockerfile multi-stage.
+
+# Imagen base con Node.js 20
+FROM node:20-alpine
+
+# Carpeta de trabajo DENTRO del contenedor (no en tu maquina host).
+# Si no existe, Docker la crea automaticamente.
+WORKDIR /app
+
+# Copiamos solo manifiestos para aprovechar cache de capas.
+# Si package-lock no cambia, npm ci no se vuelve a ejecutar.
+COPY package*.json tsconfig.json ./
+COPY prisma ./prisma/
+
+# En single-stage se instalan tambien dependencias de desarrollo.
+# Luego Prisma genera cliente dentro de node_modules.
+RUN npm ci && npx prisma generate
+
+# Recién aqui copiamos codigo de la app; esto evita romper cache antes de tiempo.
+COPY src ./src
+# Compila TypeScript y genera /app/dist
+RUN npm run build
+
+# Incluye dependencias de desarrollo, aumenta tamaño de imagen.
+# Puerto de la API
+EXPOSE 3000
+
+# Comando por defecto al arrancar el contenedor.
+# En este caso ejecuta script start de package.json.
+CMD ["npm", "run", "start"]

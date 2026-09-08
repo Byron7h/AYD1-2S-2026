@@ -1,0 +1,65 @@
+# docker-compose.yml
+#
+# Cómo se comunican los contenedores:
+#
+#   Tu máquina:   localhost:5173 → frontend (nginx)
+#                 localhost:3000 → backend  (node)
+#
+#   Dentro de Docker (red solid-network):
+#     frontend llama a http://backend:3000 (por nombre de servicio)
+#     backend llama a Neon directamente (BD externa)
+#
+#   "solid-network" es el puente. Sin ella los contenedores
+#   no se ven entre sí. Con ella se llaman por nombre.
+
+services:
+  backend:
+    # build indica como construir la imagen de este servicio.
+    build:
+      # context = carpeta que Docker envia al daemon para este build.
+      context: ./backend
+      # dockerfile = archivo de instrucciones a usar dentro del context.
+      dockerfile: Dockerfile
+      # target = etapa final del Dockerfile multi-stage (production).
+      target: production
+    # Nombre fijo del contenedor para identificarlo facil en Docker Desktop.
+    container_name: solid-backend
+    # host:container -> localhost:3000 redirige al puerto 3000 interno.
+    ports:
+      - "3000:3000"
+    # Variables de entorno disponibles dentro del contenedor backend.
+    environment:
+      - PORT=3000
+      - DATABASE_URL=${DATABASE_URL}
+    # Conecta servicio a la red virtual para comunicacion por nombre.
+    networks:
+      - solid-network
+    # Reinicia automaticamente salvo stop manual.
+    restart: unless-stopped
+    # Healthcheck para que Compose sepa cuando backend esta listo.
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/health').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: solid-frontend
+    # Publica nginx:80 como localhost:5173 en tu host.
+    ports:
+      - "5173:80"
+    # No inicia frontend hasta que backend pase su healthcheck.
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - solid-network
+    restart: unless-stopped
+
+networks:
+  solid-network:
+    # bridge crea red privada local para comunicacion entre contenedores.
+    driver: bridge

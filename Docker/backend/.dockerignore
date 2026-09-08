@@ -1,0 +1,17 @@
+# No copiar dependencias locales; se instalan dentro de la imagen.
+node_modules
+# Logs locales irrelevantes para el contenedor.
+npm-debug.log
+# Build local del host; en Docker se genera nuevamente.
+dist
+# Evita enviar secretos al contexto de build.
+.env
+# Metadatos Git no necesarios para runtime.
+.git
+.gitignore
+# Este Dockerfile es para demo comparativa; compose usa Dockerfile principal.
+Dockerfile.single
+README.md
+# Artefactos de pruebas/cobertura no se ocupan en runtime.
+coverage
+.vscode

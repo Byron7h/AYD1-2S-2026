@@ -1,0 +1,17 @@
+# No copiar dependencias locales; se reinstalan en la etapa builder.
+node_modules
+# Logs locales irrelevantes para el build.
+npm-debug.log
+# Dist local del host; Vite lo genera dentro del contenedor.
+dist
+# Evitar exponer variables sensibles en el contexto de build.
+.env
+# Metadatos del repo no necesarios para imagen final.
+.git
+.gitignore
+README.md
+# Cobertura y configuraciones locales del editor no aportan al runtime.
+coverage
+.vscode
+# Cache local de Vite no necesaria en Docker.
+.vite

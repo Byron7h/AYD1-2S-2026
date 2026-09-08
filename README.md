@@ -79,3 +79,39 @@ Ejemplo que conecta el core, los casos de uso y los requerimientos mediante matr
 - [README del ejemplo](Casos_de_uso/Ejemplo_Core_Requerimientos/README.md): describe el alcance del ejemplo y el contenido de los recursos incluidos.
 - [Ejemplo completo](Casos_de_uso/Ejemplo_Core_Requerimientos/Ejemplo_del_core_hasta_requerimientos.md): muestra el recorrido desde el core y sus procesos hasta los casos expandidos, requerimientos funcionales, requerimientos no funcionales y matrices de trazabilidad.
 - [Imágenes exportadas de los diagramas](Casos_de_uso/Ejemplo_Core_Requerimientos/imgs/): permite visualizar los diagramas incluidos en el ejemplo, aunque el código PlantUML no se renderice directamente.
+
+
+### Docker
+
+Tema general:
+
+- Aplicacion sencilla de pedidos con backend y frontend.
+- Ejemplo de Docker para construir imagenes y ejecutar la aplicacion en contenedores.
+- La clase utiliza la misma aplicacion para explicar imagenes, contenedores y orquestacion.
+
+Enlaces de referencia:
+
+- Vista general de la clase: [Docker/README.md](Docker/README.md)
+- Guia de Docker de la clase: [Docker/GUIA_DOCKER.md](Docker/GUIA_DOCKER.md)
+- Orquestacion con Docker Compose: [Docker/docker-compose.yml](Docker/docker-compose.yml)
+- Dockerfile backend (multi-stage): [Docker/backend/Dockerfile](Docker/backend/Dockerfile)
+- Dockerfile backend (single-stage): [Docker/backend/Dockerfile.single](Docker/backend/Dockerfile.single)
+- Dockerfile frontend: [Docker/frontend/Dockerfile](Docker/frontend/Dockerfile)
+- Vídeo Ejemplo (ejemplo): [https://drive.google.com/drive/folders/1avflzeWsLA2qTuLtxIK5o2xP_fH-otT3?usp=sharing](https://drive.google.com/drive/folders/1avflzeWsLA2qTuLtxIK5o2xP_fH-otT3?usp=sharing)
+
+Desglose del video (Docker):
+
+| Tiempo | Contenido |
+|---|---|
+| 0:40 | Demostracion del proyecto ejecutandose en el host. |
+| 1:30 | Definicion de conceptos y terminos generales de Docker. |
+| 2:00 | Introduccion a Dockerfiles y construccion de imagenes. |
+| 7:40 | Uso de Dockerfiles multi-etapa y generacion de imagenes optimizadas. |
+| 12:10 | Comparacion entre imagenes de una sola etapa y multi-etapa. |
+| 12:45 | Uso de archivo .dockerignore para excluir archivos en la construccion. |
+| 15:10 | Creacion y gestion de contenedores. |
+| 17:50 | Introduccion a Docker Compose como herramienta de orquestacion. |
+| 22:00 | Ejecucion de servicios mediante Docker Compose. |
+| 23:40 | Demostracion del proyecto ejecutandose desde contenedores Docker. |
+
+
