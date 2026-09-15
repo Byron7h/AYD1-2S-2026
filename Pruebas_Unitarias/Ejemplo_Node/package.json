@@ -1,0 +1,21 @@
+{
+  "name": "pruebas-unitarias-demo",
+  "version": "1.0.0",
+  "description": "Demo para clase: unitarias, mocks, stubs, fakes, integracion y cobertura con Jest",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0",
+    "supertest": "^7.1.1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
