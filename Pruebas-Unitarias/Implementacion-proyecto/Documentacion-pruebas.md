@@ -1,6 +1,6 @@
 # Documentación de Pruebas Unitarias - AuthService & AppointmentService
 
-**Ubicación de tests:** `Pruebas-Unitarias/Ejemplo_Node/tests/unit/`
+**Ubicación de tests:** `../Ejemplo_Node/tests/unit/`
 
 ---
 

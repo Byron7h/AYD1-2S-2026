@@ -18,7 +18,7 @@ Que describen:
 
 Enlace de referencia:
 
-- Requerimientos funcionales del ejemplo: [RFs-requerimientos-funcionales](RFs-requerimientos-funcionales)
+- Requerimientos funcionales del ejemplo: [RFs-requerimientos-funcionales.md](RFs-requerimientos-funcionales.md)
 
 ### Requerimientos no funcionales (RNF)
 
@@ -38,7 +38,7 @@ Que abarcan:
 
 Enlace de referencia:
 
-- Requerimientos de restriccion del ejemplo: [RRs-requerimientos-restriccion](RRs-requerimientos-restriccion)
+- Requerimientos de restriccion del ejemplo: [RRs-requerimientos-restriccion.md](RRs-requerimientos-restriccion.md)
 
 #### RNF de calidad (EAC)
 
@@ -50,7 +50,7 @@ Que abarcan:
 
 Enlace de referencia:
 
-- Requerimientos de calidad del ejemplo: [EACs-requerimientos-calidad](EACs-requerimientos-calidad)
+- Requerimientos de calidad del ejemplo: [EACs-requerimientos-calidad.md](EACs-requerimientos-calidad.md)
 
 ## Como usar esta carpeta en clase
 

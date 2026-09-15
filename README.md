@@ -39,9 +39,9 @@ Tema general:
 Enlaces de referencia:
 
 - Vista general del bloque: [Requerimientos/README.md](Requerimientos/README.md)
-- Requerimientos funcionales (RF): [Requerimientos/RFs-requerimientos-funcionales](Requerimientos/RFs-requerimientos-funcionales)
-- Requerimientos de restriccion (RR): [Requerimientos/RRs-requerimientos-restriccion](Requerimientos/RRs-requerimientos-restriccion)
-- Requerimientos de calidad (EAC): [Requerimientos/EACs-requerimientos-calidad](Requerimientos/EACs-requerimientos-calidad)
+- Requerimientos funcionales (RF): [Requerimientos/RFs-requerimientos-funcionales.md](Requerimientos/RFs-requerimientos-funcionales.md)
+- Requerimientos de restriccion (RR): [Requerimientos/RRs-requerimientos-restriccion.md](Requerimientos/RRs-requerimientos-restriccion.md)
+- Requerimientos de calidad (EAC): [Requerimientos/EACs-requerimientos-calidad.md](Requerimientos/EACs-requerimientos-calidad.md)
 
 
 ### Casos_de_uso
@@ -115,3 +115,48 @@ Desglose del video (Docker):
 | 23:40 | Demostracion del proyecto ejecutandose desde contenedores Docker. |
 
 
+### Ejemplos-SOLID
+
+Tema general:
+
+- Ejemplos cortos por principio SOLID.
+- Material de apoyo para explicar casos concretos de diseño.
+
+Enlaces de referencia:
+
+- Guia principal de principios: [Ejemplos-SOLID/README.MD](Ejemplos-SOLID/README.MD)
+- SRP: [Ejemplos-SOLID/srp.ts](Ejemplos-SOLID/srp.ts)
+- OCP: [Ejemplos-SOLID/open-close-a.ts](Ejemplos-SOLID/open-close-a.ts), [Ejemplos-SOLID/open-close-b.ts](Ejemplos-SOLID/open-close-b.ts)
+- LSP: [Ejemplos-SOLID/liskov-a.ts](Ejemplos-SOLID/liskov-a.ts), [Ejemplos-SOLID/liskov-b.ts](Ejemplos-SOLID/liskov-b.ts)
+- ISP: [Ejemplos-SOLID/segregation.ts](Ejemplos-SOLID/segregation.ts)
+- DIP: [Ejemplos-SOLID/dependency-a.ts](Ejemplos-SOLID/dependency-a.ts), [Ejemplos-SOLID/dependency-b.ts](Ejemplos-SOLID/dependency-b.ts), [Ejemplos-SOLID/dependency-c.ts](Ejemplos-SOLID/dependency-c.ts)
+
+### Pruebas-Unitarias
+
+Tema general:
+
+- Ejemplos practicos de pruebas unitarias e integracion.
+- Comparativa de implementacion en Node.js y Python.
+- Uso de cobertura para analizar calidad de pruebas.
+- Refactorizacion para mejorar testabilidad del codigo.
+
+Enlaces de referencia:
+
+- Vista general del bloque: [Pruebas-Unitarias/README.md](Pruebas-Unitarias/README.md)
+- Ejemplo Node (Jest + Supertest): [Pruebas-Unitarias/Ejemplo_Node/README.md](Pruebas-Unitarias/Ejemplo_Node/README.md)
+- Ejemplo Python (pytest + FastAPI): [Pruebas-Unitarias/Ejemplo-Python/README.md](Pruebas-Unitarias/Ejemplo-Python/README.md)
+- Refactorizacion orientada a testing: [Pruebas-Unitarias/Refactorizacion/README.md](Pruebas-Unitarias/Refactorizacion/README.md)
+- Cómo documentar Pruebas unitarias: [Pruebas-Unitarias/Implementacion-proyecto/](Pruebas-Unitarias/Implementacion-proyecto/)
+  - [Documentacion-pruebas.md](Pruebas-Unitarias/Implementacion-proyecto/Documentacion-pruebas.md): Tests de AuthService y AppointmentService
+- Video Ejemplo (ejemplo): [https://drive.google.com/drive/folders/10lnHa-AMrlNmAP2U9qZzAwogDNZq0GWP?usp=sharing](https://drive.google.com/drive/folders/10lnHa-AMrlNmAP2U9qZzAwogDNZq0GWP?usp=sharing)
+
+Desglose del video (Pruebas Unitarias, Integracion y Coverage):
+
+| Tiempo | Contenido |
+|---|---|
+| 00:00 | **Introduccion y temas que se abarcan.** |
+| 1:15 | **[Node] Explicacion del codigo a testear con inyeccion de dependencias.**<br>- (2:00) Librerias del proyecto.<br>- (3:00) Recorrido de src/authService.js.<br>- (4:40) Recorrido de src/appointmentService.js.<br>- (6:40) Recorrido de src/app.js. |
+| 8:50 | **[Node] Pruebas unitarias.**<br>- (10:10) Estructura de una prueba.<br>- (10:40) Que es un Mock.<br>- (15:40) Que es un Fake.<br>- (18:15) Que es un Stub.<br>- (21:30) Ejecucion de pruebas unitarias.<br>- (23:40) Fallo intencional de una prueba.<br>- (25:35) Cobertura de codigo.<br>- (27:00) Reporte HTML de coverage.<br>- (28:30) Como interpretar reportes para detectar codigo sin testear.<br>- (28:50) Vista rapida de integracion de pruebas en despliegue automatico. |
+| 32:00 | **[Node] Pruebas de integracion.**<br>- (33:00) Estructura de la prueba de integracion.<br>- (35:50) Ejecucion de pruebas de integracion. |
+| 36:40 | **[Python] Pruebas unitarias y de integracion.**<br>- (37:00) Explicacion del codigo (misma app que Node).<br>- (39:40) Ejecucion de pruebas y reporte de cobertura. |
+| 40:00 | **Bonus: refactorizacion de codigo con IA (CodeX)**.<br>- (40:50) Como usar la IA integrada en VS Code para refactorizar codigo. |

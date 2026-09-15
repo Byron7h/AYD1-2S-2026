@@ -7,7 +7,7 @@ Este ejemplo es una mini API con dos casos de negocio:
 Tecnologias:
 - Node.js
 - Express
-- Jest 29 (unitarias y cobertura)
+- Jest 30 (unitarias y cobertura)
 - Supertest 7 (integracion HTTP)
 
 ## Que se ve en este ejemplo
@@ -101,19 +101,19 @@ Reporte HTML en:
 - Cita en conflicto falla.
   - Usa: fake repo con cita pre-cargada.
   - Valida: error APPOINTMENT_CONFLICT.
-  - Archivo: [Pruebas-Unitarias/Ejemplo-Node/tests/unit/appointmentService.test.js](Pruebas-Unitarias/Ejemplo-Node/tests/unit/appointmentService.test.js)
+  - Archivo: [tests/unit/appointmentService.test.js](tests/unit/appointmentService.test.js)
   - Salida esperada: error APPOINTMENT_CONFLICT.
 
 ### Integracion
 
 - GET /health responde 200 con { ok: true }.
   - Usa: app real con Express.
-  - Archivo: [Pruebas-Unitarias/Ejemplo-Node/tests/integration/app.test.js](Pruebas-Unitarias/Ejemplo-Node/tests/integration/app.test.js)
+  - Archivo: [tests/integration/app.test.js](tests/integration/app.test.js)
   - Salida esperada: status 200 y body { ok: true }.
 
 - POST /login traduce error de negocio a HTTP 401.
   - Usa: app real con servicio simulado.
-  - Archivo: [Pruebas-Unitarias/Ejemplo-Node/tests/integration/app.test.js](Pruebas-Unitarias/Ejemplo-Node/tests/integration/app.test.js)
+  - Archivo: [tests/integration/app.test.js](tests/integration/app.test.js)
   - Salida esperada: status 401 y mensaje "invalid credentials".
 
 ## Cuando usar DB real
@@ -125,7 +125,7 @@ Reporte HTML en:
 ## Refactor cuando el codigo no es testeable
 
 Ejemplo completo en:
-- [Pruebas-Unitarias/Refactorizacion/README.md](Pruebas-Unitarias/Refactorizacion/README.md)
+- [Refactorizacion/README.md](../Refactorizacion/README.md)
 
 ## Tecnologias
 

@@ -96,18 +96,6 @@ Al finalizar este bloque, el estudiante deberia poder:
 - Interpretar un reporte de coverage y detectar huecos de prueba.
 - Refactorizar codigo para hacerlo mas testeable.
 
-### Implementacion-proyecto
-
-Carpeta con ejemplos de como documentar pruebas unitarias utilizando los ejemplos vistos en clase. Además de ejemplos de Pruebas unitarias en el contexto de su proyecto del laboratorio
-
-Enlaces de referencia:
-
-- Cómo documentar Pruebas Unitarias: [Implementacion-proyecto/Documentacion-pruebas.md](Implementacion-proyecto/Documentacion-pruebas.md)
-- Tests de LoginEP: [Implementacion-proyecto/loginEP.test.js](Implementacion-proyecto/loginEP.test.js)
-- Tests de Programar Cita: [Implementacion-proyecto/programarCita.test.js](Implementacion-proyecto/programarCita.test.js)
-- Tests de Registrar Tratamiento: [Implementacion-proyecto/registrarTratamiento.test.js](Implementacion-proyecto/registrarTratamiento.test.js)
-- Capturas de ejecucion: [Implementacion-proyecto/imgs/](Implementacion-proyecto/imgs/)
-
 ## Video de Ejemplo
 
 - Video Ejemplo (Pruebas Unitarias e Integracion): [https://drive.google.com/drive/folders/10lnHa-AMrlNmAP2U9qZzAwogDNZq0GWP?usp=sharing](https://drive.google.com/drive/folders/10lnHa-AMrlNmAP2U9qZzAwogDNZq0GWP?usp=sharing)

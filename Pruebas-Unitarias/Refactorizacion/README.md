@@ -11,10 +11,10 @@ Este ejemplo muestra un codigo que no es testeable y como refactorizarlo para po
 ## Archivos
 
 - Antes (no testeable):
-  - [Pruebas-Unitarias/Refactorizacion/antes/orderService.js](Pruebas-Unitarias/Refactorizacion/antes/orderService.js)
+  - [antes/orderService.js](antes/orderService.js)
 - Despues (testeable):
-  - [Pruebas-Unitarias/Refactorizacion/despues/orderService.js](Pruebas-Unitarias/Refactorizacion/despues/orderService.js)
-  - [Pruebas-Unitarias/Refactorizacion/despues/orderService.test.js](Pruebas-Unitarias/Refactorizacion/despues/orderService.test.js)
+  - [despues/orderService.js](despues/orderService.js)
+  - [despues/orderService.test.js](despues/orderService.test.js)
 
 ## Que cambia con el refactor
 
