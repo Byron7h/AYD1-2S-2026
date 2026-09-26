@@ -160,3 +160,26 @@ Desglose del video (Pruebas Unitarias, Integracion y Coverage):
 | 32:00 | **[Node] Pruebas de integracion.**<br>- (33:00) Estructura de la prueba de integracion.<br>- (35:50) Ejecucion de pruebas de integracion. |
 | 36:40 | **[Python] Pruebas unitarias y de integracion.**<br>- (37:00) Explicacion del codigo (misma app que Node).<br>- (39:40) Ejecucion de pruebas y reporte de cobertura. |
 | 40:00 | **Bonus: refactorizacion de codigo con IA (CodeX)**.<br>- (40:50) Como usar la IA integrada en VS Code para refactorizar codigo. |
+
+### Pruebas-end-to-end
+
+Tema general:
+
+- Pruebas End-to-End (E2E) con Cypress.
+- Automatizacion de flujos completos de usuarios.
+- Pruebas de integracion entre frontend y backend.
+- Suite de ejemplos practicos con la app Clase8-SOLID.
+
+Enlaces de referencia:
+
+- Vista general del bloque: [Pruebas-end-to-end/README.md](Pruebas-end-to-end/README.md)
+- Configuracion Cypress: [Pruebas-end-to-end/cypress.config.js](Pruebas-end-to-end/cypress.config.js)
+- Cómo documentar Pruebas End to End: [Pruebas-end-to-end/Implementacion-proyecto/](Pruebas-end-to-end/Implementacion-proyecto/)
+  - [Documentacion-pruebas-E2E.md](Pruebas-end-to-end/Implementacion-proyecto/Documentacion-pruebas-E2E.md): 4 casos de prueba docuemntados
+  - Ejemplo de Prueba End to end Enfocada al Proyecto del Laboratorio
+- Pruebas E2E ejemplos:
+  - [Primera prueba](Pruebas-end-to-end/cypress/e2e/01-primera-prueba.cy.js)
+  - [Pruebas de productos](Pruebas-end-to-end/cypress/e2e/02-productos.cy.js)
+  - [Pruebas de ordenes](Pruebas-end-to-end/cypress/e2e/03-ordenes.cy.js)
+  - [Validaciones](Pruebas-end-to-end/cypress/e2e/04-validaciones.cy.js)
+  - [Comandos basicos demo](Pruebas-end-to-end/cypress/e2e/05-comandos-basicos-demo.cy.js)
