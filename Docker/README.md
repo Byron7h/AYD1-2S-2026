@@ -41,6 +41,9 @@ npm install
 npm run dev
 ```
 
+Las notificaciones por email estan simuladas directamente en el backend. No se
+realiza ninguna conexion SMTP ni se requiere configurar un proveedor de correo.
+
 ## Ejecucion con Docker Compose
 
 Desde esta carpeta:

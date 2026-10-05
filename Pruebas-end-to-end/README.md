@@ -1,4 +1,4 @@
-# Pruebas End-to-End con Cypress - Clase8-SOLID
+# Pruebas End-to-End con Cypress
 
 Este directorio contiene un ejemplo completo de pruebas E2E con Cypress sobre la app de Clase8-SOLID (frontend + backend).
 
