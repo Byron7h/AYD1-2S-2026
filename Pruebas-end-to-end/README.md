@@ -153,21 +153,51 @@ cd Pruebas-end-to-end
 npm install
 ```
 
-Que pasa aqui:
+**¿Qué pasa aquí?**
+- Descarga `cypress@13.17.0` (definido en `package.json`)
+- Crea carpeta `node_modules/` con todas las dependencias
+- Tamaño: ~400 MB (es normal, Cypress incluye navegadores)
 
-- Descarga `cypress@13.17.0` (definido en `package.json`).
-- Crea `node_modules` con dependencias.
-- Tamano aproximado de descarga: ~400 MB (normal en Cypress).
+Como Cypress ya está declarado en `devDependencies` del `package.json`, el comando
+`npm install` lo instala automáticamente. No es necesario ejecutar otro comando
+de instalación en un proyecto ya configurado.
 
-Que se genera despues de instalar:
+### Instalación inicial de Cypress (solo si no está en `package.json`)
 
-```text
-node_modules/
-|-- cypress/
-|-- .bin/cypress
-|-- ...
-package-lock.json
+Si se está configurando Cypress desde cero y todavía no aparece en
+`devDependencies`, ejecuta:
+
+```bash
+npm install cypress@13.17.0 --save-dev
 ```
+
+Después de agregar Cypress al proyecto, `package.json` y `package-lock.json`
+quedan actualizados. En este repositorio ese paso ya fue realizado, por lo que
+normalmente basta con ejecutar `npm install`.
+
+**¿Qué se genera tras instalar Cypress?**
+
+Al ejecutar `npm install cypress@13.17.0 --save-dev` por primera vez:
+1. **Se descarga Cypress**: ~200 MB del archivo ejecutable
+2. **Se crean carpetas:**
+   - `node_modules/cypress/` - El framework
+   - `node_modules/.bin/cypress` - Ejecutable del proyecto
+3. **Se genera `package-lock.json`**: Bloquea versiones exactas
+4. **Se actualiza `package.json`**: Agrega `"cypress": "^13.17.0"` en `devDependencies`
+
+Los archivos generados DESPUÉS de instalar:
+```
+node_modules/
+├── cypress/              # Framework completo
+├── .bin/cypress          # Ejecutable
+├── sharp/                # Procesador de imágenes
+├── electron/             # Motor de Electron
+└── ... (700+ paquetes más)
+
+package-lock.json        # Lockfile con versiones exactas
+```
+
+---
 
 ### Paso 2: Abrir Cypress con interfaz visual
 

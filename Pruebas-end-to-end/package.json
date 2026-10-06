@@ -2,7 +2,7 @@
   "name": "clase8-solid-e2e-cypress",
   "version": "1.0.0",
   "private": true,
-  "description": "Pruebas end-to-end con Cypress para Clase8-SOLID",
+  "description": "Pruebas end-to-end con Cypress",
   "scripts": {
     "cy:open": "cypress open",
     "cy:open:chrome": "cypress open --browser chrome",
