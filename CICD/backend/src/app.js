@@ -33,7 +33,7 @@ app.post('/login', async (req, res) => {
     console.log(`[LOGIN] Resultado DB:`, user);
 
     if (!user) {
-      return res.status(200).json({
+      return res.status(401).json({
         message: 'Credenciales incorrectas'
       });
     }
