@@ -1,0 +1,70 @@
+name: Backend CI/CD  # Nombre del workflow
+
+on:
+  push:
+    branches: [main]  # Se ejecuta cuando hay push a main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Usa una VM Ubuntu temporal
+
+    steps:
+      - name: "📥 Checkout del codigo"
+        uses: actions/checkout@v4  # Descarga el repo
+
+      - name: "🟢 Configurar Node.js 22"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22  # Instala Node 22
+
+      - name: "📦 Instalar dependencias del backend"
+        run: |
+          cd CICD/backend
+          npm ci  # Instala dependencias exactas (más rápido y seguro)
+
+      - name: "🐳 Build de imagen Docker del backend"
+        run: docker build -t cicd-demo-backend ./CICD/backend
+        # Construye una imagen Docker usando el Dockerfile
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build  # Solo corre si build fue exitoso
+
+    steps:
+      - name: "📥 Checkout del codigo"
+        uses: actions/checkout@v4
+
+      - name: "🟢 Configurar Node.js 22"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: "🧪 Ejecutar pruebas Jest"
+        run: |
+          cd CICD/backend
+          npm install  # Instala dependencias
+          npm test     # Ejecuta pruebas
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test  # Solo corre si tests pasan
+
+    steps:
+      - name: "📥 Checkout del codigo"
+        uses: actions/checkout@v4
+
+      - name: "🟢 Configurar Node.js 22"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: "🚀 Deploy temporal en runner"
+        run: |
+          cd CICD/backend
+          npm install --omit=dev  # Solo dependencias de producción
+          npm start &             # Corre el servidor en segundo plano
+          sleep 3                 # Espera que levante
+          curl http://localhost:3000/health  # Verifica que responde
+          echo "✅ Backend corriendo en el runner"
+
+    # Este deploy NO es real, solo prueba que el backend funciona
