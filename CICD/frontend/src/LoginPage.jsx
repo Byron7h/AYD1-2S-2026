@@ -41,7 +41,7 @@ export default function LoginPage({ onLoginSuccess }) {
   return (
     <main style={styles.main}>
       <section style={styles.card}>
-        <h1 style={styles.title}>CI/CD</h1>
+        <h1 style={styles.title}>CI/CD Cambio </h1>
         <p style={styles.subtitle}>Usa tu cuenta de prueba para validar el flujo completo.</p>
 
         <form onSubmit={handleSubmit} style={styles.form}>
